@@ -1,5 +1,7 @@
-package com.example.demo.employee;
+package com.example.demo.employee.service;
 
+import com.example.demo.employee.EmployeeRepository;
+import com.example.demo.employee.entity.Employee;
 import com.example.demo.employee.presenter.CreateEmployeePresenter;
 import com.example.demo.employee.request.CreateEmployeeRequest;
 import com.example.demo.employee.response.CreateEmployeeResponse;
@@ -8,14 +10,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class EmployeeServiceImpl implements EmployeeService {
+public class CreateEmployeeServiceImpl implements CreateEmployeeService {
 
     private final EmployeeRepository employeeRepository;
 
     @Override
     public void create(CreateEmployeeRequest request, CreateEmployeePresenter presenter) {
         validateRequest(request, presenter);
-        Employee employee = new Employee(request.getName(), request.getSalary());
+        Employee employee = new Employee(request.getName(), request.getSalary(), request.getGrade());
 
         Employee employeeSaved = employeeRepository.save(employee);
         CreateEmployeeResponse response = new CreateEmployeeResponse(employeeSaved.getId());

@@ -1,9 +1,10 @@
-package com.example.demo.employee;
+package com.example.demo.employee.service;
 
 import com.example.demo.employee.presenter.CreateEmployeePresenter;
 import com.example.demo.employee.request.CreateEmployeeRequest;
 
-public interface EmployeeService {
+public interface CreateEmployeeService {
 
     void create(CreateEmployeeRequest request, CreateEmployeePresenter presenter);
+
 }

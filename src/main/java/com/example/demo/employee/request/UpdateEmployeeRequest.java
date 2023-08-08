@@ -10,7 +10,10 @@ import java.math.BigInteger;
 
 @Value
 @EqualsAndHashCode(callSuper = false)
-public class CreateEmployeeRequest extends ValidationAware<CreateEmployeeRequest> {
+public class UpdateEmployeeRequest extends ValidationAware<UpdateEmployeeRequest> {
+
+    @NotNull(message = "ID cannot be empty")
+    Long id;
 
     @NotBlank(message = "Name cannot be empty")
     String name;
