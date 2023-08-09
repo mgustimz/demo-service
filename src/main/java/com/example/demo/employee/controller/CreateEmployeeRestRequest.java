@@ -1,4 +1,4 @@
-package com.example.demo.employee.request;
+package com.example.demo.employee.controller;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

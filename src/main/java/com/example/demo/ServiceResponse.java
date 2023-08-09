@@ -1,4 +1,4 @@
-package com.example.demo.employee.response;
+package com.example.demo;
 
 import lombok.Getter;
 import lombok.Setter;

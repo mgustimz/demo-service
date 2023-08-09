@@ -1,6 +1,10 @@
-package com.example.demo.employee.response;
+package com.example.demo.employee.usecase.updateemployee;
 
-import lombok.*;
+import com.example.demo.ServiceResponse;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigInteger;
 

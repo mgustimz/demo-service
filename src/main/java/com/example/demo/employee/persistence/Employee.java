@@ -1,16 +1,14 @@
-package com.example.demo.employee.entity;
+package com.example.demo.employee.persistence;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigInteger;
 
-@Getter
-@Setter
 @Entity
+@Data
 @Table
 @NoArgsConstructor
 @AllArgsConstructor
