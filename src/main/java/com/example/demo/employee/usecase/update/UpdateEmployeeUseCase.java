@@ -1,4 +1,4 @@
-package com.example.demo.employee.usecase.updateemployee;
+package com.example.demo.employee.usecase.update;
 
 import com.example.demo.employee.persistence.Employee;
 import com.example.demo.employee.persistence.EmployeeRepository;
@@ -12,7 +12,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Validated
-public class UpdateEmployeeUseCase implements UpdateEmployee {
+class UpdateEmployeeUseCase implements UpdateEmployee {
 
     private final EmployeeRepository employeeRepository;
 

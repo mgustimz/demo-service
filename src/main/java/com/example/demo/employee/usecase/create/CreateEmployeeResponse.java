@@ -1,4 +1,4 @@
-package com.example.demo.employee.usecase.createemployee;
+package com.example.demo.employee.usecase.create;
 
 import lombok.Value;
 

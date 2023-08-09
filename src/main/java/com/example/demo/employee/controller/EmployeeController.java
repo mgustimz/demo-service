@@ -1,10 +1,11 @@
 package com.example.demo.employee.controller;
 
 import com.example.demo.constant.Routes;
-import com.example.demo.employee.usecase.createemployee.CreateEmployee;
-import com.example.demo.employee.usecase.createemployee.CreateEmployeeRequest;
-import com.example.demo.employee.usecase.updateemployee.UpdateEmployee;
-import com.example.demo.employee.usecase.updateemployee.UpdateEmployeeRequest;
+import com.example.demo.employee.usecase.create.CreateEmployee;
+import com.example.demo.employee.usecase.create.CreateEmployeeRequest;
+import com.example.demo.employee.usecase.list.ListEmployee;
+import com.example.demo.employee.usecase.update.UpdateEmployee;
+import com.example.demo.employee.usecase.update.UpdateEmployeeRequest;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,8 @@ public class EmployeeController {
     private final CreateEmployee createEmployee;
 
     private final UpdateEmployee updateEmployee;
+
+    private final ListEmployee listEmployee;
 
     @PostMapping(Routes.EMPLOYEE)
     @ResponseStatus(HttpStatus.CREATED)
@@ -44,5 +47,13 @@ public class EmployeeController {
         var response = updateEmployee.update(employeeRequest);
 
         return UpdateEmployeeRestResponse.valueOf(response);
+    }
+
+    @GetMapping(path = Routes.EMPLOYEE)
+    @ResponseStatus(HttpStatus.OK)
+    public ListEmployeeRestResponse list() {
+        var response = listEmployee.list();
+
+        return ListEmployeeRestResponse.valueOf(response);
     }
 }

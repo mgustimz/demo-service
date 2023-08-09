@@ -1,6 +1,5 @@
-package com.example.demo.employee.usecase.updateemployee;
+package com.example.demo.employee.usecase.update;
 
-import com.example.demo.ServiceResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +11,7 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @Getter
 @Setter
-public class UpdateEmployeeResponse extends ServiceResponse {
+public class UpdateEmployeeResponse {
 
     private Long id;
 

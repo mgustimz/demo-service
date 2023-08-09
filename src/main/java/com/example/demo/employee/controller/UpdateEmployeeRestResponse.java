@@ -1,6 +1,6 @@
 package com.example.demo.employee.controller;
 
-import com.example.demo.employee.usecase.updateemployee.UpdateEmployeeResponse;
+import com.example.demo.employee.usecase.update.UpdateEmployeeResponse;
 
 import java.math.BigInteger;
 

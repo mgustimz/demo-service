@@ -1,4 +1,4 @@
-package com.example.demo.employee.usecase.createemployee;
+package com.example.demo.employee.usecase.create;
 
 import com.example.demo.employee.persistence.Employee;
 import com.example.demo.employee.persistence.EmployeeRepository;
