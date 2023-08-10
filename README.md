@@ -34,7 +34,7 @@ MYSQL_HOST: testdb
 
 Please run application first then click the link below.
 
-[Documentation](http://localhost:8080/swagger-ui/index.html)
+[API Documentation](http://localhost:8080/swagger-ui/index.html)
 
 
 ## Database
