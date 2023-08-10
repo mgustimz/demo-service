@@ -32,7 +32,7 @@ class UpdateEmployeeTest {
     }
 
     @Test
-    void givenValidRequest_whenCreate_shouldThrowException() {
+    void givenValidRequest_whenCreate_shouldCallRepository() {
         UpdateEmployeeRequest request = new UpdateEmployeeRequest(1L, "Susan", BigInteger.valueOf(100L), 3);
         Optional<Employee> employee = Optional.of(new Employee(1L, "Susan", BigInteger.valueOf(100L), 3));
         when(employeeRepository.findById(any())).thenReturn(employee);

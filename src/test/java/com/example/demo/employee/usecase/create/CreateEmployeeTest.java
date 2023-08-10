@@ -31,7 +31,7 @@ class CreateEmployeeTest {
     }
 
     @Test
-    void givenValidRequest_whenCreate_shouldThrowException() {
+    void givenValidRequest_whenCreate_shouldCallRepository() {
         CreateEmployeeRequest request = new CreateEmployeeRequest("Susan", BigInteger.valueOf(100L), 3);
         when(employeeRepository.save(any())).thenReturn(new Employee(1L, "Susan", BigInteger.valueOf(100L), 3));
         useCase.create(request);
