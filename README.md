@@ -15,7 +15,7 @@ demo:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/${DB_SCHEMA}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/${DB_SCHEMA:testdb}
     username: admin
     password: password
   jpa:
@@ -26,7 +26,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     show-sql: true
-MYSQL_HOST: testdb
 ```
 
 
