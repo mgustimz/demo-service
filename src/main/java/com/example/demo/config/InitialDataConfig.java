@@ -14,11 +14,13 @@ public class InitialDataConfig {
     @Bean
     CommandLineRunner commandLineRunner(GradeRepository gradeRepository) {
         return args -> {
-            Grade manager = new Grade(1L, "Manager", 10);
-            Grade supervisor = new Grade(2L, "Supervisor", 6);
-            Grade staff = new Grade(3L, "Staff", 3);
+            gradeRepository.deleteAll(); // clear table
 
-            gradeRepository.saveAll(List.of(manager, supervisor, staff));
+            gradeRepository.saveAll(List.of(
+                    new Grade(null, "Manager", 10),     // JANGAN pakai ID manual
+                    new Grade(null, "Supervisor", 6),
+                    new Grade(null, "Staff", 3)
+            ));
         };
     }
 }
